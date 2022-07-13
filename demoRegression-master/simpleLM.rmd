@@ -52,7 +52,7 @@ abline(simp)
 summary.lm(simp)
 ```
 
-Using head length to predict length is better than using neck. It gave an adjusted r-squared value of 0.8434 a bigger value than when using neck. Also the residual standard error was small er than neck with 5.376 head length's standard error was only 4.235. 
+Using head length to predict length is better than using neck. It gave an adjusted r-squared value of 0.8434 a bigger value than when using neck. Also the residual standard error was smaller than neck with 5.376 head length's standard error was only 4.235. 
 
 ```{r}
 simp <- lm(LENGTH~AGE,data=bears)
@@ -91,3 +91,6 @@ summary.lm(simp)
  Using month to compare for length prediction would be way worse than using neck. With an adjusted r-squared value of -0.01153 and the standard error of 10.76. The plot really shows this by the points being so spread out.
 
 
+
+
+Going through the different variables to see which gives the best prediction of bear's length , the results showed that using head length was the most efficient. With an adjusted r-squared of 0.8434 and only having a standard error of 4.235. The second best way to predict length would be using chest to compare, with a adjusted r-squared value of 0.7869 and a standard error of 4.939. Using head length and chest are both better than using neck to predict the length of these bears. Neck having standard error of 5.376 and an adjusted r-squared of 0.7524. Both head length and chest had a smaller standard error and a bigger adjusted r-squared. 
