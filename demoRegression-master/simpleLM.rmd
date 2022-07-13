@@ -81,3 +81,13 @@ summary.lm(simp)
 ```
 
 Using chest to compare for length prediction is better than using neck. With an adjusted r-squared value of 0.7869 and smaller standard error of 4.939. Chest would be better then using neck to predict the length of the bears.
+
+```{r}
+simp <- lm(LENGTH~MONTH,data=bears)
+plot(LENGTH~MONTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+ Using month to compare for length prediction would be way worse than using neck. With an adjusted r-squared value of -0.01153 and the standard error of 10.76. The plot really shows this by the points being so spread out.
+
+
