@@ -61,4 +61,13 @@ abline(simp)
 summary.lm(simp)
 ```
 
-Using age to compare for length was worse than using neck. Having an adjusted r-squared value of 0.5166 but having a standard error of 7.511.the plot demonstarted this grately by seeing many points fall under the line.
+Using age to compare for length was worse than using neck. Having an adjusted r-squared value of 0.5166 but having a standard error of 7.511.the plot demonstrated this grately by seeing many points fall under the line.
+
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Using head width to compare for length was not better than neck. Having a smaller adjusted r-squared of 0.5321 and a standard error of 7.32. The plot being so spread out between shows the effects of such a larger standard error.
