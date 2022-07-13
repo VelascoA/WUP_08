@@ -71,3 +71,13 @@ summary.lm(simp)
 ```
 
 Using head width to compare for length was not better than neck. Having a smaller adjusted r-squared of 0.5321 and a standard error of 7.32. The plot being so spread out between shows the effects of such a larger standard error.
+
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Using chest to compare for length prediction is better than using neck. With an adjusted r-squared value of 0.7869 and smaller standard error of 4.939. Chest would be better then using neck to predict the length of the bears.
