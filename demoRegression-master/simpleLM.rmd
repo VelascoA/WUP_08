@@ -42,5 +42,14 @@ plot(LENGTH~WEIGHT,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-Comparing length to weigh to find the best prediction of length gave us a smaller r-squared than neck only giving us a r-squared value of 0.7472. Using weight would not be better than using neck to predict length.  
 
+Comparing length to weight to find the best prediction of length gave us a smaller r-squared than neck only giving us a r-squared value of 0.7472. Using weight would not be better than using neck to predict length.  
+
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Usign head length to predict length is better than using neck. It gave an adjusted r-squared value of 0.8434 a bigger value than when using neck. Also the residual standard error was small er than neck with 5.376 head length's standard error was only 4.235. 
